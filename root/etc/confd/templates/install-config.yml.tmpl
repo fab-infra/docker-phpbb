@@ -1,0 +1,38 @@
+installer:
+  admin:
+    name: {{getv "/phpbb/username"}}
+    password: {{getv "/phpbb/password"}}
+    email: {{getv "/phpbb/email"}}
+
+  board:
+    lang: {{getv "/phpbb/forum/language"}}
+    name: {{getv "/phpbb/forum/name"}}
+    description: {{getv "/phpbb/forum/description"}}
+
+  database:
+    dbms: mysqli
+    dbhost: {{getv "/phpbb/database/host"}}
+    dbport: {{getv "/phpbb/database/port/number"}}
+    dbuser: {{getv "/phpbb/database/user"}}
+    dbpasswd: {{getv "/phpbb/database/password"}}
+    dbname: {{getv "/phpbb/database/name"}}
+    table_prefix: phpbb_
+
+  email:
+    enabled: {{if ne (getv "/phpbb/smtp/host") ""}}true{{else}}false{{end}}
+    smtp_delivery : {{if ne (getv "/phpbb/smtp/host") ""}}true{{else}}false{{end}}
+    smtp_host: {{getv "/phpbb/smtp/host"}}
+    smtp_port: {{getv "/phpbb/smtp/port/number"}}
+    smtp_auth: {{getv "/phpbb/smtp/protocol"}}
+    smtp_user: {{getv "/phpbb/smtp/user"}}
+    smtp_pass: {{getv "/phpbb/smtp/password"}}
+
+  server:
+    cookie_secure: {{getv "/phpbb/cookie/secure"}}
+    server_protocol: {{getv "/phpbb/forum/server/protocol"}}
+    force_server_vars: false
+    server_name: {{getv "/phpbb/host"}}
+    server_port: {{getv "/phpbb/forum/server/port"}}
+    script_path: /
+
+  extensions: ['{{join (split (getv "/phpbb/extensions") ",") "', '"}}']

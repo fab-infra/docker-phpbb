@@ -1,0 +1,26 @@
+[template]
+src = "install-config.yml.tmpl"
+dest = "/tmp/phpbb/install-config.yml"
+keys = [
+    "/phpbb/cookie/secure",
+    "/phpbb/database/host",
+    "/phpbb/database/name",
+    "/phpbb/database/password",
+    "/phpbb/database/port/number",
+    "/phpbb/database/user",
+    "/phpbb/email",
+    "/phpbb/extensions",
+    "/phpbb/forum/description",
+    "/phpbb/forum/language",
+    "/phpbb/forum/name",
+    "/phpbb/forum/server/port",
+    "/phpbb/forum/server/protocol",
+    "/phpbb/host",
+    "/phpbb/password",
+    "/phpbb/smtp/host",
+    "/phpbb/smtp/password",
+    "/phpbb/smtp/port/number",
+    "/phpbb/smtp/protocol",
+    "/phpbb/smtp/user",
+    "/phpbb/username",
+]

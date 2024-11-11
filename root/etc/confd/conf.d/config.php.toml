@@ -1,0 +1,10 @@
+[template]
+src = "config.php.tmpl"
+dest = "/tmp/phpbb/config.php"
+keys = [
+    "/phpbb/database/host",
+    "/phpbb/database/port/number",
+    "/phpbb/database/name",
+    "/phpbb/database/user",
+    "/phpbb/database/password"
+]
