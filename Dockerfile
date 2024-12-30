@@ -2,7 +2,7 @@
 FROM ghcr.io/fab-infra/php-apache:8.2-opensuse15
 
 # Arguments
-ARG PHPBB_VERSION="3.3.13"
+ARG PHPBB_VERSION="3.3.14"
 ARG PHPBB_URL="https://download.phpbb.com/pub/release/3.3/${PHPBB_VERSION}/phpBB-${PHPBB_VERSION}.tar.bz2"
 
 # Download and extract phpBB
